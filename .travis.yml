@@ -6,4 +6,4 @@ before_install:
     - docker build -t sunandnair/dock-r -f Dockerfile.dev .
 
 script:
-    - docker run sunandnair/dock-r npm run test -- --coverage
+    - docker run -e CI=true sunandnair/dock-r npm run test
